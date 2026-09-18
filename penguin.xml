@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Core -->
+  <remove-project name="AOSPA/android_bionic" />
+  <project path="bionic" name="Project-PenguinOS/bionic" remote="penguin" revision="celerity" />
+
+  <!-- Build -->
+  <remove-project name="platform/build/release" />
+  <project path="build/release" name="Project-PenguinOS/android_build_release" remote="penguin" revision="celerity" />
+  <remove-project name="AOSPA/android_build_soong" />
+  <project path="build/soong" name="Project-PenguinOS/build_soong" remote="penguin" revision="celerity">
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Frameworks -->
+  <remove-project name="AOSPA/android_frameworks_av" />
+  <project path="frameworks/av" name="Project-PenguinOS/frameworks_av" remote="penguin" revision="celerity" />
+  <remove-project name="AOSPA/android_frameworks_base" />
+  <project path="frameworks/base" name="Project-PenguinOS/frameworks_base" remote="penguin" revision="celerity" />
+  <remove-project name="platform/frameworks/libs/systemui" />
+  <project path="frameworks/libs/systemui" name="Project-PenguinOS/frameworks_libs_systemui" remote="penguin" revision="celerity" />
+  <remove-project name="AOSPA/android_frameworks_native" />
+  <project path="frameworks/native" name="Project-PenguinOS/android_frameworks_native" remote="penguin" revision="celerity" />
+  <remove-project name="platform/frameworks/opt/telephony" />
+  <project path="frameworks/opt/telephony" name="Project-PenguinOS/frameworks_opt_telephony" remote="penguin" revision="celerity" />
+
+  <!-- Hardware -->
+  <remove-project name="AOSPA/android_hardware_interfaces" />
+  <project path="hardware/interfaces" name="Project-PenguinOS/hardware_interfaces" remote="penguin" revision="celerity" />
+
+  <!-- Modules -->
+  <remove-project name="AOSPA/android_packages_modules_Bluetooth" />
+  <project path="packages/modules/Bluetooth" name="Project-PenguinOS/packages_modules_Bluetooth" remote="penguin" revision="celerity" />
+  <remove-project name="AOSPA/android_packages_modules_Connectivity" />
+  <project path="packages/modules/Connectivity" name="Project-PenguinOS/packages_modules_Connectivity" remote="penguin" revision="celerity" />
+  <remove-project name="platform/packages/modules/Wifi" />
+  <project path="packages/modules/Wifi" name="Project-PenguinOS/packages_modules_Wifi" remote="penguin" revision="celerity" />
+
+  <!-- Packages -->
+  <remove-project name="platform/packages/apps/Dialer" />
+  <project path="packages/apps/Dialer" name="Project-PenguinOS/penguin_packages_apps_Dialer" remote="penguin" revision="celerity" />
+  <project path="packages/apps/GameSpace" name="Project-PenguinOS/packages_apps_GameSpace" remote="penguin" revision="celerity" />
+  <project path="packages/apps/LMOFreeform" name="Project-PenguinOS/packages_apps_LMOFreeform" remote="penguin" revision="celerity" />
+  <remove-project name="AOSPA/android_packages_apps_Launcher3" />
+  <project path="packages/apps/Launcher3" name="Project-PenguinOS/packages_apps_Launcher3" remote="penguin" revision="celerity" />
+  <project path="packages/apps/PenguinSetupWizard" name="Project-PenguinOS/packages_apps_PenguinSetupWizard" remote="penguin" revision="celerity" />
+  <remove-project name="AOSPA/android_packages_apps_Settings" />
+  <project path="packages/apps/Settings" name="Project-PenguinOS/packages_apps_Settings" remote="penguin" revision="celerity" />
+  <project path="packages/apps/Updater" name="Project-PenguinOS/packages_apps_Updater" remote="penguin" revision="celerity" />
+  <remove-project name="AOSPA/android_packages_apps_WallpaperPicker2" />
+  <project path="packages/apps/WallpaperPicker2" name="Project-PenguinOS/packages_apps_WallpaperPicker2" remote="penguin" revision="celerity" />
+
+  <!-- Services -->
+  <remove-project name="AOSPA/android_packages_services_Telecomm" />
+  <project path="packages/services/Telecomm" name="Project-PenguinOS/packages_services_Telecomm" remote="penguin" revision="celerity" />
+  <remove-project name="platform/packages/services/Telephony" />
+  <project path="packages/services/Telephony" name="Project-PenguinOS/packages_services_Telephony" remote="penguin" revision="celerity" />
+
+  <!-- System -->
+  <remove-project name="AOSPA/android_system_core" />
+  <project path="system/core" name="Project-PenguinOS/system_core" remote="penguin" revision="celerity" />
+  <remove-project name="AOSPA/android_system_media" />
+  <project path="system/media" name="Project-PenguinOS/system_media" remote="penguin" revision="celerity" />
+  <remove-project name="platform/system/memory/libmeminfo" />
+  <project path="system/memory/libmeminfo" name="Project-PenguinOS/system_memory_libmeminfo" remote="penguin" revision="celerity" />
+  <remove-project name="AOSPA/android_system_memory_lmkd" />
+  <project path="system/memory/lmkd" name="Project-PenguinOS/system_memory_lmkd" remote="penguin" revision="celerity" />
+  <remove-project name="platform/system/netd" />
+  <project path="system/netd" name="Project-PenguinOS/system_netd" remote="penguin" revision="celerity" />
+  <remove-project name="platform/system/security" />
+  <project path="system/security" name="Project-PenguinOS/system_security" remote="penguin" revision="celerity" />
+  <remove-project name="platform/system/sepolicy" />
+  <project path="system/sepolicy" name="Project-PenguinOS/system_sepolicy" remote="penguin" revision="celerity" />
+  <remove-project name="AOSPA/android_system_update_engine" />
+  <project path="system/update_engine" name="Project-PenguinOS/system_update_engine" remote="penguin" revision="celerity" />
+
+  <!-- Vendor -->
+  <remove-project name="AOSPA/android_vendor_aospa" />
+  <project path="vendor/aospa" name="Project-PenguinOS/android_vendor_aospa" remote="penguin" revision="celerity">
+    <linkfile src="build.sh" dest="rom-build.sh" />
+  </project>
+  <project path="vendor/custom-preference" name="Project-PenguinOS/vendor_custom-preference" remote="penguin" revision="celerity" />
+  <remove-project name="platform/vendor/qcom-opensource/core-utils-vendor" />
+  <project path="vendor/qcom/opensource/core-utils-vendor" name="Project-PenguinOS/android_vendor_qcom_opensource_core-utils-vendor" remote="penguin" revision="celerity" />
+
+</manifest>

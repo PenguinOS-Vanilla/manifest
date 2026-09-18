@@ -1,8 +1,10 @@
-# Paranoid Android
+# PenguinOS
+
+PenguinOS is an Android distribution based on [Paranoid Android](https://github.com/AOSPA).
 
 ## Set up your machine
 
-You must run a 64-bit Linux distribution to build Paranoid Android.
+You must run a 64-bit Linux distribution to build PenguinOS.
 Follow the system setup instructions on the [Android Open Source Project website](https://source.android.com/source/initializing.html#setting-up-a-linux-build-environment).
 Google provides Ubuntu-specific setup packages and instructions.
 Complete the environment setup before you proceed.
@@ -44,7 +46,7 @@ Initialize the manifest repository:
 > Configure your real name and email address in Git before you initialize Repo if you plan to submit patches.
 
 ```bash
-repo init -u https://github.com/AOSPA/manifest -b calcite
+repo init -u https://github.com/Project-PenguinOS/manifest -b celerity
 ```
 
 ### Download the source tree
@@ -71,7 +73,7 @@ Specify projects by repository path or remote name.
 > [!WARNING]
 > Partial synchronization can cause build failures if changes span across projects.
 
-For example, specify `frameworks/base` or `AOSPA/android_frameworks_base`:
+For example, specify `frameworks/base` or `Project-PenguinOS/frameworks_base`:
 ```bash
 repo sync PROJECT
 ```
@@ -79,7 +81,7 @@ repo sync PROJECT
 ## Build
 
 The bundled builder script `./rom-build.sh` automates all build steps for a target device.
-Provide the target device codename as the argument (for example, `phone2` for Nothing Phone (2)).
+Provide the target device codename as the argument (for example, `sky` for POCO M6 Pro 5G, or `marble` for POCO F5).
 
 Navigate to your workspace root and execute the build script:
 ```bash
@@ -89,10 +91,10 @@ cd WORKSPACE
 
 ## Submit patches
 
-Paranoid Android is open source and accepts patches from contributors.
-Track patch review status on [Gerrit Code Review](https://gerrit.aospa.co/).
+PenguinOS is open source and accepts patches from contributors.
+Changes are reviewed as pull requests on [GitHub](https://github.com/Project-PenguinOS).
 
-### Standard workflow with Repo
+### Create a branch
 
 Navigate to your workspace root:
 ```bash
@@ -104,32 +106,15 @@ Identify the project by repository name or local directory path:
 
 | Identify by | Command |
 | --- | --- |
-| Repository name | `repo start BRANCH AOSPA/PROJECT` |
+| Repository name | `repo start BRANCH Project-PenguinOS/PROJECT` |
 | Directory path | `repo start BRANCH PROJECT_DIR` |
 
-For example, start a branch for `frameworks/base` (`AOSPA/android_frameworks_base`):
+For example, start a branch for `frameworks/base` (`Project-PenguinOS/frameworks_base`):
 ```bash
 repo start BRANCH frameworks/base
 ```
 
-Navigate to the project directory:
-```bash
-cd PROJECT_DIR
-```
-
-Make your code changes, then stage and commit them:
-```bash
-git add -A
-git commit -a -s
-```
-
-Upload your changes to Gerrit for review:
-```bash
-cd WORKSPACE
-repo upload PROJECT_DIR
-```
-
-### Workflow with plain Git
+### Commit and push
 
 Navigate to the project directory:
 ```bash
@@ -142,46 +127,24 @@ git add -A
 git commit -a -s
 ```
 
-Push the commit directly to Gerrit.
-Replace `USERNAME` with your Gerrit username and `PROJECT` with the repository name.
+Push the branch to your fork and open a pull request against `celerity`.
+Replace `USERNAME` with your GitHub username and `PROJECT` with the repository name.
 ```bash
-git push ssh://USERNAME@gerrit-ssh.aospa.co:29418/AOSPA/PROJECT HEAD:refs/for/calcite
-```
-
-### Gerrit push options
-
-Append a suffix to the refspec to configure review options.
-You can also toggle these options in the Gerrit web interface.
-
-| Suffix | Effect |
-| --- | --- |
-| `%private` | Upload a change as private |
-| `%wip` | Upload a change as work-in-progress |
-| `%remove-private` | Remove the private status from a change |
-| `%ready` | Mark a work-in-progress change as ready for review |
-
-For example, upload a change as private:
-```bash
-git push ssh://USERNAME@gerrit-ssh.aospa.co:29418/AOSPA/PROJECT HEAD:refs/for/calcite%private
+git push git@github.com:USERNAME/PROJECT HEAD:BRANCH
 ```
 
 ### Make additional changes
 
-To update an existing patch set, make your changes and amend the previous commit.
-
-> [!CAUTION]
-> Do not run `repo start` again.
-> Running `repo start` creates a new topic branch instead of updating the existing review.
-
+To update an open pull request, amend the previous commit and force-push the branch:
 ```bash
 git commit -a --amend
+git push --force-with-lease git@github.com:USERNAME/PROJECT HEAD:BRANCH
 ```
-When you upload the amended commit, Gerrit attaches it as a new patch set to the existing review.
 
 ### Squash multiple commits
 
 Each submitted patch must be a single commit.
-Squash multiple commits before you upload:
+Squash multiple commits before you push:
 ```bash
 git rebase -i HEAD~<commit-count>
 ```
@@ -194,13 +157,9 @@ Write clear and descriptive commit messages.
 - Keep the subject line near 50 characters and under 72 characters.
 - Capitalize the first word of the subject line and omit trailing periods.
 - Prefix the subject with the relevant project or component name when appropriate (for example, `manifest: Update default branch`).
+- Keep the subject line as the whole message unless the reason for the change is not evident from the diff.
 - Separate the subject line from the message body with a blank line.
 - Wrap message body text at 72 characters.
-
-## Translations
-
-Submit translations for Paranoid Android through Crowdin.
-Access the translation portal at https://crowdin.aospa.co.
 
 ## Project assets and licensing
 
@@ -215,6 +174,6 @@ Read the full license text at https://www.apache.org/licenses/LICENSE-2.0.
 
 Unless otherwise specified, all project assets (including images and branding) use the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license.
 You may share and adapt these assets for non-commercial purposes.
-You must provide attribution to the original author (Paranoid Android Project or AOSPA).
-Include a reference to the license, note any modifications, and link to https://aospa.co.
+You must provide attribution to the original author (PenguinOS).
+Include a reference to the license and note any modifications.
 Read the full license text at https://creativecommons.org/licenses/by-nc/4.0/.
