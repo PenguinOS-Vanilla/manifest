@@ -9,20 +9,20 @@
   <remove-project name="platform/build/release" />
   <project path="build/release" name="Project-PenguinOS/android_build_release" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_build_soong" />
-  <project path="build/soong" name="Project-PenguinOS/build_soong" remote="penguin" revision="celerity">
+  <project path="build/soong" name="build_soong" remote="keosh" revision="celerity">
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
   <!-- Frameworks -->
   <remove-project name="AOSPA/android_frameworks_av" />
-  <project path="frameworks/av" name="Project-PenguinOS/frameworks_av" remote="penguin" revision="celerity" />
+  <project path="frameworks/av" name="frameworks_av" remote="keosh" revision="celerity" />
   <remove-project name="AOSPA/android_frameworks_base" />
-  <project path="frameworks/base" name="Project-PenguinOS/frameworks_base" remote="penguin" revision="celerity" />
+  <project path="frameworks/base" name="frameworks_base" remote="keosh" revision="celerity" />
   <remove-project name="platform/frameworks/libs/systemui" />
   <project path="frameworks/libs/systemui" name="Project-PenguinOS/frameworks_libs_systemui" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_frameworks_native" />
-  <project path="frameworks/native" name="Project-PenguinOS/android_frameworks_native" remote="penguin" revision="celerity" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="keosh" revision="celerity" />
   <remove-project name="platform/frameworks/opt/telephony" />
   <project path="frameworks/opt/telephony" name="Project-PenguinOS/frameworks_opt_telephony" remote="penguin" revision="celerity" />
 
@@ -78,7 +78,7 @@
 
   <!-- Vendor -->
   <remove-project name="AOSPA/android_vendor_aospa" />
-  <project path="vendor/aospa" name="Project-PenguinOS/android_vendor_aospa" remote="penguin" revision="celerity">
+  <project path="vendor/aospa" name="android_vendor_aospa" remote="keosh" revision="celerity">
     <linkfile src="build.sh" dest="rom-build.sh" />
   </project>
   <project path="vendor/custom-preference" name="Project-PenguinOS/vendor_custom-preference" remote="penguin" revision="celerity" />
@@ -87,4 +87,24 @@
   <remove-project name="platform/vendor/qcom-opensource/core-utils-vendor" />
   <project path="vendor/qcom/opensource/core-utils-vendor" name="Project-PenguinOS/android_vendor_qcom_opensource_core-utils-vendor" remote="penguin" revision="celerity" />
 
+  <!-- MicroG-->
+  <project path="vendor/partner_gms" name="lineageos4microg/android_vendor_partner_gms" remote="github" revision="master" />
+
+  <!-- Vanilla Apps -->
+  <remove-project name="platform/packages/apps/DeskClock" />
+  <project path="packages/apps/DeskClock" name="LineageOS/android_packages_apps_DeskClock" remote="github" revision="lineage-24.0" />
+  <remove-project name="platform/packages/apps/Calendar" />
+  <project path="packages/apps/Etar" name="LineageOS/android_packages_apps_Etar" remote="github" revision="lineage-24.0" />
+  <project path="packages/apps/ExactCalculator" name="LineageOS/android_packages_apps_ExactCalculator" remote="github" revision="lineage-24.0" />
+  <project path="packages/apps/Glimpse" name="LineageOS/android_packages_apps_Glimpse" remote="github" revision="lineage-24.0" />
+  <project path="packages/apps/Jelly" name="LineageOS/android_packages_apps_Jelly" remote="github" revision="lineage-24.0" />
+  <project path="packages/apps/Recorder" name="LineageOS/android_packages_apps_Recorder" remote="github" revision="lineage-24.0" />
+  <project path="packages/apps/Twelve" name="LineageOS/android_packages_apps_Twelve" remote="github" revision="lineage-24.0" />
+
+  <!-- Face Unlock -->
+  <project path="packages/apps/ParanoidSense" name="AOSPA/android_packages_apps_ParanoidSense" remote="aospa" />
+
+  <!-- NTFS -->
+  <project path="external/ntfs-3g" name="LineageOS/android_external_ntfs-3g" remote="github" revision="lineage-24.0" />
+  
 </manifest>
