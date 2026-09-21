@@ -56,6 +56,16 @@
            fetch="https://github.com"
            revision="celerity" />
 
+  <!-- Local Remote -->
+  <remote  name="keosh"
+           fetch="https://github.com/PenguinOS-Vanilla"
+           revision="celerity"/>
+
+  <!-- Local Remote -->
+  <remote  name="shadedark"
+           fetch="https://github.com/aospa-shadedark"
+           revision="calcite"/>
+
   <include name="aosp.xml"/>
   <include name="aospa.xml"/>
   <include name="penguin.xml"/>
