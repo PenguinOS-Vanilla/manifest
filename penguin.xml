@@ -18,20 +18,20 @@
   <remove-project name="platform/build/release" />
   <project path="build/release" name="Project-PenguinOS/android_build_release" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_build_soong" />
-  <project path="build/soong" name="Project-PenguinOS/build_soong" remote="penguin" revision="celerity">
+  <project path="build/soong" name="build_soong" remote="keosh" revision="celerity">
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
   <!-- Frameworks -->
   <remove-project name="AOSPA/android_frameworks_av" />
-  <project path="frameworks/av" name="Project-PenguinOS/frameworks_av" remote="penguin" revision="celerity" />
+  <project path="frameworks/av" name="frameworks_av" remote="keosh" revision="celerity" />
   <remove-project name="AOSPA/android_frameworks_base" />
-  <project path="frameworks/base" name="Project-PenguinOS/frameworks_base" remote="penguin" revision="celerity" />
+  <project path="frameworks/base" name="frameworks_base" remote="keosh" revision="celerity" />
   <remove-project name="platform/frameworks/libs/systemui" />
   <project path="frameworks/libs/systemui" name="Project-PenguinOS/frameworks_libs_systemui" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_frameworks_native" />
-  <project path="frameworks/native" name="Project-PenguinOS/android_frameworks_native" remote="penguin" revision="celerity" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="keosh" revision="celerity" />
   <remove-project name="platform/frameworks/opt/telephony" />
   <project path="frameworks/opt/telephony" name="Project-PenguinOS/frameworks_opt_telephony" remote="penguin" revision="celerity" />
 
@@ -95,12 +95,8 @@
   <project path="system/update_engine" name="Project-PenguinOS/system_update_engine" remote="penguin" revision="celerity" />
 
   <!-- Vendor -->
-  <remove-project name="AOSPA/android_device_qcom_common" />
-  <project path="device/qcom/common" name="Project-PenguinOS/device_qcom_common" remote="penguin" revision="celerity">
-    <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
-  </project>
   <remove-project name="AOSPA/android_vendor_aospa" />
-  <project path="vendor/aospa" name="Project-PenguinOS/android_vendor_aospa" remote="penguin" revision="celerity">
+  <project path="vendor/aospa" name="android_vendor_aospa" remote="keosh" revision="celerity">
     <linkfile src="build.sh" dest="rom-build.sh" />
   </project>
   <project path="vendor/custom-preference" name="Project-PenguinOS/vendor_custom-preference" remote="penguin" revision="celerity" />
@@ -112,8 +108,6 @@
   <project path="vendor/qcom/opensource/commonsys/bluetooth" name="Project-PenguinOS/vendor_qcom_opensource_commonsys_bluetooth" remote="penguin" revision="celerity" />
   <remove-project name="platform/vendor/qcom-opensource/core-utils-vendor" />
   <project path="vendor/qcom/opensource/core-utils-vendor" name="Project-PenguinOS/android_vendor_qcom_opensource_core-utils-vendor" remote="penguin" revision="celerity" />
-  <remove-project name="AOSPA/android_vendor_qcom-opensource_power" />
-  <project path="vendor/qcom/opensource/power" name="Project-PenguinOS/vendor_qcom_opensource_power" remote="penguin" revision="celerity" />
 
 
   <remove-project name="platform/art" />
@@ -135,11 +129,23 @@
   <remove-project name="platform/packages/providers/TelephonyProvider" />
   <project path="packages/providers/TelephonyProvider" name="Project-PenguinOS/packages_providers_TelephonyProvider" remote="penguin" revision="celerity" groups="24Q3-fs-release,25Q2-fs-release,25Q4-fs-release,26Q2-fs-release,pdk-cw-fs,pdk-fs,trunk-fs-release,qc-common-sys-intf,vsdk_exc_L2,vsdk_exc_L1,vsdk_exc_L3" />
 
+  <!-- MicroG-->
+  <project path="vendor/partner_gms" name="lineageos4microg/android_vendor_partner_gms" remote="github" revision="master" />
+
   <!-- Vanilla Apps -->
   <remove-project name="platform/packages/apps/Contacts" />
   <project path="packages/apps/Contacts" name="LineageOS/android_packages_apps_Contacts" remote="github" revision="lineage-24.0" />
+  <remove-project name="platform/packages/apps/DeskClock" />
+  <project path="packages/apps/DeskClock" name="LineageOS/android_packages_apps_DeskClock" remote="github" revision="lineage-24.0" />
+  <remove-project name="platform/packages/apps/Calendar" />
+  <project path="packages/apps/Etar" name="LineageOS/android_packages_apps_Etar" remote="github" revision="lineage-24.0" />
+  <project path="packages/apps/ExactCalculator" name="LineageOS/android_packages_apps_ExactCalculator" remote="github" revision="lineage-24.0" />
+  <project path="packages/apps/Glimpse" name="LineageOS/android_packages_apps_Glimpse" remote="github" revision="lineage-24.0" />
+  <project path="packages/apps/Jelly" name="LineageOS/android_packages_apps_Jelly" remote="github" revision="lineage-24.0" />
   <remove-project name="platform/packages/apps/Messaging" />
   <project path="packages/apps/Messaging" name="LineageOS/android_packages_apps_Messaging" remote="github" revision="lineage-24.0" />
+  <project path="packages/apps/Recorder" name="LineageOS/android_packages_apps_Recorder" remote="github" revision="lineage-24.0" />
+  <project path="packages/apps/Twelve" name="LineageOS/android_packages_apps_Twelve" remote="github" revision="lineage-24.0" />
 
   <remove-project name="platform/packages/apps/QuickSearchBox" />
 
@@ -162,4 +168,7 @@
   <project path="external/chromium-webview/prebuilt/x86" name="LineageOS/android_external_chromium-webview_prebuilt_x86" remote="github" groups="pdk" revision="main" />
   <project path="external/chromium-webview/prebuilt/x86_64" name="LineageOS/android_external_chromium-webview_prebuilt_x86_64" remote="github" groups="pdk" revision="main" />
 
+  <!-- NTFS -->
+  <project path="external/ntfs-3g" name="LineageOS/android_external_ntfs-3g" remote="github" revision="lineage-24.0" />
+  
 </manifest>
