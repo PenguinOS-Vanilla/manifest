@@ -95,6 +95,8 @@
   <project path="vendor/partner_gms" name="lineageos4microg/android_vendor_partner_gms" remote="github" revision="master" />
 
   <!-- Vanilla Apps -->
+  <remove-project name="platform/packages/apps/Contacts" />
+  <project path="packages/apps/Contacts" name="LineageOS/android_packages_apps_Contacts" remote="github" revision="lineage-24.0" />
   <remove-project name="platform/packages/apps/DeskClock" />
   <project path="packages/apps/DeskClock" name="LineageOS/android_packages_apps_DeskClock" remote="github" revision="lineage-24.0" />
   <remove-project name="platform/packages/apps/Calendar" />
@@ -102,6 +104,8 @@
   <project path="packages/apps/ExactCalculator" name="LineageOS/android_packages_apps_ExactCalculator" remote="github" revision="lineage-24.0" />
   <project path="packages/apps/Glimpse" name="LineageOS/android_packages_apps_Glimpse" remote="github" revision="lineage-24.0" />
   <project path="packages/apps/Jelly" name="LineageOS/android_packages_apps_Jelly" remote="github" revision="lineage-24.0" />
+  <remove-project name="platform/packages/apps/Messaging" />
+  <project path="packages/apps/Messaging" name="LineageOS/android_packages_apps_Messaging" remote="github" revision="lineage-24.0" />
   <project path="packages/apps/Recorder" name="LineageOS/android_packages_apps_Recorder" remote="github" revision="lineage-24.0" />
   <project path="packages/apps/Twelve" name="LineageOS/android_packages_apps_Twelve" remote="github" revision="lineage-24.0" />
 
