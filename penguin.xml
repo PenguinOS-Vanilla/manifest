@@ -45,14 +45,18 @@
   <project path="packages/apps/LMOFreeform" name="Project-PenguinOS/packages_apps_LMOFreeform" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_packages_apps_Launcher3" />
   <project path="packages/apps/Launcher3" name="Project-PenguinOS/packages_apps_Launcher3" remote="penguin" revision="celerity" />
+  <project path="packages/apps/ParanoidSense" name="Project-PenguinOS/packages_apps_ParanoidSense" remote="penguin" revision="celerity" />
   <project path="packages/apps/PenguinSetupWizard" name="Project-PenguinOS/packages_apps_PenguinSetupWizard" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_packages_apps_Settings" />
   <project path="packages/apps/Settings" name="Project-PenguinOS/packages_apps_Settings" remote="penguin" revision="celerity" />
+  <remove-project name="AOSPA/android_packages_apps_ThemePicker" />
+  <project path="packages/apps/ThemePicker" name="Project-PenguinOS/packages_apps_ThemePicker" remote="penguin" revision="celerity" />
   <project path="packages/apps/Updater" name="Project-PenguinOS/packages_apps_Updater" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_packages_apps_WallpaperPicker2" />
   <project path="packages/apps/WallpaperPicker2" name="Project-PenguinOS/packages_apps_WallpaperPicker2" remote="penguin" revision="celerity" />
 
   <!-- Services -->
+  <project path="packages/services/OmniJaw" name="Project-PenguinOS/packages_services_OmniJaw" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_packages_services_Telecomm" />
   <project path="packages/services/Telecomm" name="Project-PenguinOS/packages_services_Telecomm" remote="penguin" revision="celerity" />
   <remove-project name="platform/packages/services/Telephony" />
