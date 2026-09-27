@@ -4,6 +4,8 @@
   <!-- Core -->
   <remove-project name="AOSPA/android_bionic" />
   <project path="bionic" name="Project-PenguinOS/bionic" remote="penguin" revision="celerity" />
+  <remove-project name="platform/art" />
+  <project path="art" name="android_art" remote="shadedark" revision="calcite" />
 
   <!-- Build -->
   <remove-project name="AOSPA/android_build" />
@@ -93,6 +95,8 @@
   <project path="system/sepolicy" name="Project-PenguinOS/system_sepolicy" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_system_update_engine" />
   <project path="system/update_engine" name="Project-PenguinOS/system_update_engine" remote="penguin" revision="celerity" />
+  <remove-project name="platform/system/vold" />
+  <project path="system/vold" name="android_system_vold" remote="shadedark" revision="calcite" />
 
   <!-- Vendor -->
   <remove-project name="AOSPA/android_vendor_aospa" />
@@ -110,8 +114,6 @@
   <project path="vendor/qcom/opensource/core-utils-vendor" name="Project-PenguinOS/android_vendor_qcom_opensource_core-utils-vendor" remote="penguin" revision="celerity" />
 
 
-  <remove-project name="platform/art" />
-  <project path="art" name="Project-PenguinOS/art" remote="penguin" revision="celerity" groups="24Q3-fs-release,25Q2-fs-release,25Q4-fs-release,26Q2-fs-release,pdk,trunk-fs-release,qc-common-sys-intf,vsdk_inc_L2,vsdk_inc_L1,vsdk_inc_L3" />
   <remove-project name="platform/external/wpa_supplicant_8" />
   <project path="external/wpa_supplicant_8" name="Project-PenguinOS/external_wpa_supplicant_8" remote="penguin" revision="celerity" groups="24Q3-fs-release,25Q2-fs-release,25Q4-fs-release,26Q2-fs-release,pdk,trunk-fs-release,qc-common-sys-intf,vsdk_inc_L2,vsdk_inc_L1,vsdk_inc_L3" />
   <remove-project name="platform/hardware/nxp/nfc" />
