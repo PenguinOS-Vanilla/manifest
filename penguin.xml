@@ -50,7 +50,7 @@
   <project path="packages/apps/ParanoidSense" name="Project-PenguinOS/packages_apps_ParanoidSense" remote="penguin" revision="celerity" />
   <project path="packages/apps/PenguinSetupWizard" name="Project-PenguinOS/packages_apps_PenguinSetupWizard" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_packages_apps_Settings" />
-  <project path="packages/apps/Settings" name="Project-PenguinOS/packages_apps_Settings" remote="penguin" revision="celerity" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="keosh" revision="celerity" />
   <remove-project name="AOSPA/android_packages_apps_ThemePicker" />
   <project path="packages/apps/ThemePicker" name="Project-PenguinOS/packages_apps_ThemePicker" remote="penguin" revision="celerity" />
   <project path="packages/apps/Updater" name="Project-PenguinOS/packages_apps_Updater" remote="penguin" revision="celerity" />
