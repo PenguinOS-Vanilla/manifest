@@ -4,6 +4,8 @@
   <!-- Core -->
   <remove-project name="AOSPA/android_bionic" />
   <project path="bionic" name="Project-PenguinOS/bionic" remote="penguin" revision="celerity" />
+  <remove-project name="platform/art" />
+  <project path="art" name="android_art" remote="shadedark" revision="calcite" />
 
   <!-- Build -->
   <remove-project name="platform/build/release" />
@@ -79,6 +81,8 @@
   <project path="system/sepolicy" name="Project-PenguinOS/system_sepolicy" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_system_update_engine" />
   <project path="system/update_engine" name="Project-PenguinOS/system_update_engine" remote="penguin" revision="celerity" />
+  <remove-project name="platform/system/vold" />
+  <project path="system/vold" name="android_system_vold" remote="shadedark" revision="calcite" />
 
   <!-- Vendor -->
   <remove-project name="AOSPA/android_vendor_aospa" />
@@ -108,6 +112,27 @@
   <project path="packages/apps/Messaging" name="LineageOS/android_packages_apps_Messaging" remote="github" revision="lineage-24.0" />
   <project path="packages/apps/Recorder" name="LineageOS/android_packages_apps_Recorder" remote="github" revision="lineage-24.0" />
   <project path="packages/apps/Twelve" name="LineageOS/android_packages_apps_Twelve" remote="github" revision="lineage-24.0" />
+
+  <remove-project name="platform/packages/apps/QuickSearchBox" />
+
+  <!-- ContactsProvider -->
+  <remove-project name="platform/packages/providers/ContactsProvider" />
+  <project path="packages/providers/ContactsProvider" name="LineageOS/android_packages_providers_ContactsProvider" remote="github" revision="lineage-24.0" />
+
+  <!-- Keyboard -->
+  <remove-project name="platform/packages/inputmethods/LatinIME" />
+  <project path="packages/inputmethods/LatinIME" name="LineageOS/android_packages_inputmethods_LatinIME" remote="github" revision="lineage-24.0" />
+
+  <!-- WebView -->
+  <remove-project name="platform/external/chromium-webview" />
+  <project path="external/chromium-webview/patches" name="LineageOS/android_external_chromium-webview_patches" remote="github" groups="pdk" revision="main">
+    <linkfile src="os_pickup.bp" dest="external/chromium-webview/Android.bp" />
+    <linkfile src="README" dest="external/chromium-webview/README" />
+  </project>
+  <project path="external/chromium-webview/prebuilt/arm" name="LineageOS/android_external_chromium-webview_prebuilt_arm" remote="github" groups="pdk" revision="main" />
+  <project path="external/chromium-webview/prebuilt/arm64" name="LineageOS/android_external_chromium-webview_prebuilt_arm64" remote="github" groups="pdk" revision="main" />
+  <project path="external/chromium-webview/prebuilt/x86" name="LineageOS/android_external_chromium-webview_prebuilt_x86" remote="github" groups="pdk" revision="main" />
+  <project path="external/chromium-webview/prebuilt/x86_64" name="LineageOS/android_external_chromium-webview_prebuilt_x86_64" remote="github" groups="pdk" revision="main" />
 
   <!-- NTFS -->
   <project path="external/ntfs-3g" name="LineageOS/android_external_ntfs-3g" remote="github" revision="lineage-24.0" />
