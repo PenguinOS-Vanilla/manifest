@@ -75,8 +75,6 @@
   <project path="system/memory/lmkd" name="Project-PenguinOS/system_memory_lmkd" remote="penguin" revision="celerity" />
   <remove-project name="platform/system/netd" />
   <project path="system/netd" name="Project-PenguinOS/system_netd" remote="penguin" revision="celerity" />
-  <remove-project name="platform/system/security" />
-  <project path="system/security" name="Project-PenguinOS/system_security" remote="penguin" revision="celerity" />
   <remove-project name="platform/system/sepolicy" />
   <project path="system/sepolicy" name="Project-PenguinOS/system_sepolicy" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_system_update_engine" />
