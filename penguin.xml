@@ -55,7 +55,7 @@
   <project path="packages/apps/GameSpace" name="Project-PenguinOS/packages_apps_GameSpace" remote="penguin" revision="celerity" />
   <project path="packages/apps/LMOFreeform" name="Project-PenguinOS/packages_apps_LMOFreeform" remote="penguin" revision="celerity" />
   <remove-project name="AOSPA/android_packages_apps_Launcher3" />
-  <project path="packages/apps/Launcher3" name="Project-PenguinOS/packages_apps_Launcher3" remote="penguin" revision="celerity" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="keosh" revision="celerity" />
   <project path="packages/apps/ParanoidSense" name="Project-PenguinOS/packages_apps_ParanoidSense" remote="penguin" revision="celerity" />
   <project path="packages/apps/PenguinDex" name="Project-PenguinOS/penguin_packages_apps_PenguinDex" remote="penguin" revision="celerity" />
   <project path="packages/apps/PenguinLaboratory" name="Project-PenguinOS/penguin_packages_apps_PenguinLaboratory" remote="penguin" revision="celerity" />
