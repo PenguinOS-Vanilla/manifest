@@ -60,7 +60,7 @@
   <project path="packages/apps/PenguinDex" name="Project-PenguinOS/penguin_packages_apps_PenguinDex" remote="penguin" revision="celerity" />
   <project path="packages/apps/PenguinLaboratory" name="Project-PenguinOS/penguin_packages_apps_PenguinLaboratory" remote="penguin" revision="celerity" />
   <project path="packages/apps/PenguinSetupWizard" name="Project-PenguinOS/packages_apps_PenguinSetupWizard" remote="penguin" revision="celerity" />
-  <project path="packages/apps/PenguinSystemUI" name="Project-PenguinOS/penguin_packages_apps_PenguinSystemUI" remote="penguin" revision="celerity" />
+  <project path="packages/apps/PenguinSystemUI" name="penguin_packages_apps_PenguinSystemUI" remote="keosh" revision="celerity" />
   <remove-project name="AOSPA/android_packages_apps_Settings" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="keosh" revision="celerity" />
   <remove-project name="AOSPA/android_packages_apps_ThemePicker" />
