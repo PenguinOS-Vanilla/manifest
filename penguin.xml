@@ -149,7 +149,7 @@
 
   <!-- Keyboard -->
   <remove-project name="platform/packages/inputmethods/LatinIME" />
-  <project path="packages/inputmethods/LatinIME" name="LineageOS/android_packages_inputmethods_LatinIME" remote="github" revision="lineage-24.0" />
+  <project path="packages/inputmethods/LatinIME" name="Project-PenguinOS/penguin_packages_inputmethods_LatinIME" remote="penguin" revision="celerity" />
 
   <!-- WebView -->
   <remove-project name="platform/external/chromium-webview" />
